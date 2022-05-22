@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxi typecheck && nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.6",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@types/mocha": "^9.1.1",
+    "chai": "^4.3.6",
+    "eslint": "^8.16.0",
+    "ethereum-waffle": "^3.4.4",
+    "ethers": "^5.6.7",
+    "nuxt": "3.0.0-rc.3"
+  },
+  "dependencies": {
+    "@coinbase/wallet-sdk": "^3.1.0",
+    "@openzeppelin/contracts": "^4.6.0",
+    "@walletconnect/web3-provider": "^1.7.8",
+    "hardhat": "^2.9.6",
+    "ipfs-http-client": "^56.0.3",
+    "web3modal": "^1.9.7"
+  }
+}
