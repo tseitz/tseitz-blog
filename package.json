@@ -5,7 +5,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "prettier:solidity": "./node_modules/.bin/prettier --write contracts/**/*.sol"
+    "prettier:solidity": "prettier --write contracts/**/*.sol",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.6",
@@ -18,7 +19,9 @@
     "husky": "^8.0.1",
     "nuxt": "3.0.0-rc.3",
     "prettier": "^2.6.2",
-    "prettier-plugin-solidity": "1.0.0-beta.19"
+    "prettier-plugin-solidity": "1.0.0-beta.19",
+    "solhint": "^3.3.7",
+    "solhint-plugin-prettier": "^0.0.5"
   },
   "dependencies": {
     "@coinbase/wallet-sdk": "^3.1.0",
@@ -27,10 +30,5 @@
     "hardhat": "^2.9.6",
     "ipfs-http-client": "^56.0.3",
     "web3modal": "^1.9.7"
-  },
-  "husky": {
-    "hooks": {
-       "pre-push": "npm run prettier:solidity"
-    }
   }
 }
