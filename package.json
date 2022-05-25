@@ -4,7 +4,8 @@
     "build": "nuxi typecheck && nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "prettier:solidity": "./node_modules/.bin/prettier --write contracts/**/*.sol"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.6",
@@ -14,7 +15,10 @@
     "eslint": "^8.16.0",
     "ethereum-waffle": "^3.4.4",
     "ethers": "^5.6.7",
-    "nuxt": "3.0.0-rc.3"
+    "husky": "^8.0.1",
+    "nuxt": "3.0.0-rc.3",
+    "prettier": "^2.6.2",
+    "prettier-plugin-solidity": "1.0.0-beta.19"
   },
   "dependencies": {
     "@coinbase/wallet-sdk": "^3.1.0",
@@ -23,5 +27,10 @@
     "hardhat": "^2.9.6",
     "ipfs-http-client": "^56.0.3",
     "web3modal": "^1.9.7"
+  },
+  "husky": {
+    "hooks": {
+       "pre-push": "npm run prettier:solidity"
+    }
   }
 }
